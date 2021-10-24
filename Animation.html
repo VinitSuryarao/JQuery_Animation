@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title> JQuery Test  </title>
+   <style>
+      #bdy{
+         background-color: palegreen;
+         position: relative;
+         border: 1px solid black;
+      }
+   </style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type = "text/javascript">
+
+		    // ready func call when document is ready to render
+         $(document).ready(function() 
+         {     
+               // Animate
+               $('#btnAnimate').click(function(){
+                  $('#bdy').animate({
+                     left: '150px', 
+                     width: '200px',
+                     fontSize: '30px',
+                     fontStyle: 'bold',
+                     height: 'toggle'
+                  }); 
+               });
+
+                // Multiple Animate
+                $('#btnMultipleAnimate').click(function(){
+                  $('#bdy').animate({left: '150px'});
+                  $('#bdy').animate({width: '200px'});
+                  $('#bdy').animate({fontSize: '30px'});
+                  $('#bdy').animate({fontStyle: 'bold'});
+                  $('#bdy').animate({height: 'toggle'});
+                    
+               });
+         });
+     </script>
+<head>
+   <body>
+   <div id="bdy">
+      <h1> JQuery Information</h1>
+   </div>
+   <button id="btnAnimate"> Animate </button> 
+   <button id="btnMultipleAnimate"> Multiple Animate </button> 
+</body>
+</html>
